@@ -1,73 +1,73 @@
-#include "io.h"
+ï»¿#include "io.h"
 
-void Variable() // º¯¼ö, »ó¼ö
+void Variable() // ë³€ìˆ˜, ìƒìˆ˜
 {
-	int Value1 = 100;
-	Value1 = 200;
-
-	const int Value2 = 50;
-	//Value2 = 100;
-	// ½ÇÇà µÇ´Â ¾Öµé Áß¿¡¼­ ¿À·ù ÀÖ´ÂÁö Ã¼Å©
-	// ÇÔ¼ö´Â Áö±İ ½ÇÇà ¾ÈµÇ´Â»óÅÂ¿©¼­
+  int Value1 = 100;
+  Value1 = 200;
+  
+  const int Value2 = 50;
+  //Value2 = 100;
+  // ì‹¤í–‰ ë˜ëŠ” ì• ë“¤ ì¤‘ì—ì„œ ì˜¤ë¥˜ ìˆëŠ”ì§€ ì²´í¬
+  // í•¨ìˆ˜ëŠ” ì§€ê¸ˆ ì‹¤í–‰ ì•ˆë˜ëŠ”ìƒíƒœì—¬ì„œ
 }
 
-void VariableTypeNumber() // º¯¼ö Å¸ÀÔ- Á¤¼ö, ½Ç¼ö
+void VariableTypeNumber() // ë³€ìˆ˜ íƒ€ì…- ì •ìˆ˜, ì‹¤ìˆ˜
 {
-	// Á¤¼öÇü µ¥ÀÌÅÍ Á¾·ù
-	short Num1 = 10; // 2^16(À½¼ö¾ç¼ö)
-	int Num2 = 20;   // 2^32
-	// Àû´çÇÑ¹üÀ§¿©¼­ ¸¹ÀÌ¾¸, integer ÀÇ ¾àÀÚ
-	long Num3 = 30; // 2^64
-
-	cout << Num1 << Num2 << Num3 << endl;
-
-	// ½Ç¼öÇü µ¥ÀÌÅÍ Á¾·ù
-	float Num4 = 1.23; // ¼Ò¼öÁ¡ 0ÀÌ¸é ¹«½Ã
-	float Num41 = 1.345f;
-	double Num5 = 1.34567;
-
-	cout << Num4 << Num5 << endl;
+  // ì •ìˆ˜í˜• ë°ì´í„° ì¢…ë¥˜
+  short Num1 = 10; // 2^16(ìŒìˆ˜ì–‘ìˆ˜)
+  int Num2 = 20;   // 2^32
+  // ì ë‹¹í•œë²”ìœ„ì—¬ì„œ ë§ì´ì”€, integer ì˜ ì•½ì
+  long Num3 = 30; // 2^64
+  
+  cout << Num1 << Num2 << Num3 << endl;
+  
+  // ì‹¤ìˆ˜í˜• ë°ì´í„° ì¢…ë¥˜
+  float Num4 = 1.23; // ì†Œìˆ˜ì  0ì´ë©´ ë¬´ì‹œ
+  float Num41 = 1.345f;
+  double Num5 = 1.34567;
+  
+  cout << Num4 << Num5 << endl;
 }
 
-void VariableTypeCharacter() // º¯¼ö Å¸ÀÔ - ¹®ÀÚ
+void VariableTypeCharacter() // ë³€ìˆ˜ íƒ€ì… - ë¬¸ì
 {
-	// ¹®ÀÚÇü µ¥ÀÌÅÍ
-	// ¹®ÀÚ ÇÑ°³: '', ¹®ÀÚ¿©·¯°³: ""
-	// char Å¸ÀÔÀº ¹®ÀÚ 1°³¸¸ ÀúÀå °¡´É
-	char Text1; // char: character
-	char Text2;
-
-	Text1 = 'A';
-	Text2 = 'B';
-	// ¿©·¯°³´Â µÚ¿¡ ¹è¿­¿¡¼­..
-
-	cout << Text1 << endl << Text2 << endl;
+  // ë¬¸ìí˜• ë°ì´í„°
+  // ë¬¸ì í•œê°œ: '', ë¬¸ìì—¬ëŸ¬ê°œ: ""
+  // char íƒ€ì…ì€ ë¬¸ì 1ê°œë§Œ ì €ì¥ ê°€ëŠ¥
+  char Text1; // char: character
+  char Text2;
+  
+  Text1 = 'A';
+  Text2 = 'B';
+  // ì—¬ëŸ¬ê°œëŠ” ë’¤ì— ë°°ì—´ì—ì„œ..
+  
+  cout << Text1 << endl << Text2 << endl;
 }
 
-void VariableTypeBool() // º¯¼ö Å¸ÀÔ - bool
+void VariableTypeBool() // ë³€ìˆ˜ íƒ€ì… - bool
 {
-	bool condition;
-
-	condition = true;
-	cout << condition << endl;
-	condition = false;
-	cout << condition << endl;
-
-	condition = 1; // true
-	condition = 0; // false
-
-	// 0 => false, ±× ¿Ü Á¤¼ö => true
-	condition = 10;
-	cout << condition << endl;
-
-	condition = -5;
-	cout << condition << endl;
+  bool condition;
+  
+  condition = true;
+  cout << condition << endl;
+  condition = false;
+  cout << condition << endl;
+  
+  condition = 1; // true
+  condition = 0; // false
+  
+  // 0 => false, ê·¸ ì™¸ ì •ìˆ˜ => true
+  condition = 10;
+  cout << condition << endl;
+  
+  condition = -5;
+  cout << condition << endl;
 }
 
-void InputOutput() // ÀÔÃâ·Â
+void InputOutput() // ì…ì¶œë ¥
 {
-	int number;
-	// ¿ÜºÎ ÀÔ·Â
-	cin >> number;
-	cout << number << endl;
+  int number;
+  // ì™¸ë¶€ ì…ë ¥
+  cin >> number;
+  cout << number << endl;
 }

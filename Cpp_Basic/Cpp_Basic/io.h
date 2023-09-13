@@ -1,8 +1,6 @@
-#pragma once
-
-// ÀÔÃâ·Â Çì´õÆÄÀÏ
+// ì…ì¶œë ¥ í—¤ë”íŒŒì¼
 #include <iostream> // input/output stream
-// main¿¡ Æ÷ÇÔµÇ¾î¾ßÇÔ
+// mainì— í¬í•¨ë˜ì–´ì•¼í•¨
 
-// std namespace »ç¿ë Á¤ÀÇ
+// std namespace ì‚¬ìš© ì •ì˜
 using namespace std; // standard
