@@ -19,7 +19,9 @@ void AlphaNumber()
 {
   char Word[20];
   int WordSize = sizeof(Word)-1;
-  
+ 
+  cout << WordSize << endl;
+
   cout << "원하는 단어를 입력해주세요";
   cin >> Word;
 
@@ -32,10 +34,11 @@ void AlphaNumber()
   // 동적 할당은 런타임(run time; 실행될 때)에 배열 실행함
   // 정적 할당 - compile time
   //
-  int Check[26];
+  // int Check[26];
+  int* pCheck = new int[AlphaSize];
   for (int i=0; i<AlphaSize; i++)
   {
-     Check[i] = -1; 
+     pCheck[i] = -1; 
   }
   
   for(int i=0; i<WordSize; i++)
@@ -44,8 +47,8 @@ void AlphaNumber()
     {
       if(Word[i] == Alpha[j])
       {
-        if(Check[j] == -1){
-          Check[j] = i;
+        if(pCheck[j] == -1){
+          pCheck[j] = i;
         }
       }
     }
@@ -56,7 +59,7 @@ void AlphaNumber()
   
   for (int i=0; i<AlphaSize; i++)
   {
-    cout << Check[i] << " ";
+    cout << pCheck[i] << " ";
   }
 }
 

@@ -40,3 +40,6 @@ void AlphaNumber();
 void Enum();
 void TwoDimension();
 void PointerDefine();
+void DynamicVariable();
+void BallInsert();
+
