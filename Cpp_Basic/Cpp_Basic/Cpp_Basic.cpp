@@ -6,12 +6,16 @@
 #include "main.h"
 #include "io.h"
 
-#define PLUS (2 + 3)
+#include "Ch10_Class.h"
+
 
 int main()
 {
     cout << "Test!\n";
+    Car Sonata(80);
 
+    Sonata.DriveVelocity();
+    Sonata.DriveTime();
     
 }
 
