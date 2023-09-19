@@ -265,7 +265,7 @@ class Car
   void Break(){}
   void Parking(){}
   void Rear(){}
-}
+};
 
 Car Sonata;
 cout << Sonata.Year << endl;

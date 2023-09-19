@@ -43,3 +43,7 @@ void PointerDefine();
 void DynamicVariable();
 void BallInsert();
 
+void ArrayClass();
+void StringClass();
+void VectorClass();
+

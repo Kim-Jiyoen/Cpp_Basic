@@ -27,6 +27,8 @@ int main()
 
     cout << Ray.GetYear() << endl;
 
+    Vehicle Sonata;
+
     // 클래스 동적 선언
     Animal* Dog = new Animal;
     //int* a = new int;
@@ -60,7 +62,20 @@ int main()
 
     // 생성자가 명시적으로 선언
     // 자식 클래스 선언: 명시적 선언
-    // Auto Mobile();
+
+    cout << "--------------------" << endl;
+    Auto Mobile;
+
+    Auto Avante(2024, 10000000);
+
+    cout << "--------------------" << endl;
+    // ArrayClass();
+
+    // StringClass();
+
+    VectorClass();
+
+    cout << "--------------------" << endl;
 
     // Mobile().PrintPrice();
 }
