@@ -2,11 +2,13 @@
 class Animal
 {
 private:
-	int Leg;
 	int Finger;
-
+	int Leg;
+	
 public:
-	Animal();
-	void PrintLeg();
+	Animal(); //Default Constructor
+	Animal(int _Finger, int _Leg);
+
 	void PrintFinger();
+	void PrintLeg();
 };

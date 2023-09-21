@@ -13,6 +13,9 @@
 #include "Atv.h"
 #include "Arithmatic.h"
 #include "Auto.h"
+#include "Ch14_VirtualParent.h"
+#include "Ch14_VirtualChild.h"
+#include "Ch15_PureVirtualChild.h"
 
 int main()
 {
@@ -76,6 +79,47 @@ int main()
     VectorClass();
 
     cout << "--------------------" << endl;
+
+    VirtualParent* Parent = new VirtualParent;
+    VirtualChild* Child = new VirtualChild;
+
+    Parent->PrintClass();
+
+    Child->PrintClass(); // Overriding 작동.. Parent 클래스의 PrintClass 무시하고 본인꺼 출력
+
+    Parent = Child;
+
+    Parent->PrintClass(); // 동적으로 생성하더라도 코드는 정적으로 생성(?)
+
+    VirtualParent2* Parent2 = new VirtualParent2;
+    VirtualChild2* Child2 = new VirtualChild2;
+
+    Parent2->PrintClass();
+
+    Child2->PrintClass(); // Overriding 작동
+
+    Parent2 = Child2;
+
+    Parent2->PrintClass(); 
+
+    cout << "--------------------" << endl;
+
+    // PureVirtualParent PureParent; => 추상클래스는 단독으로 객체 생성할 수 없음 
+    // 추상 클래스를 상속 받는 자식 클래스는 순수 가상함수를 재정의 해야함
+    PureVirtualChild PureChild;
+
+    PureChild.Print();
+    PureChild.PrintClass();
+
+    cout << "--------------------" << endl;
+
+    cout << SumNumber(3, 2) << endl;
+    cout << SumNumber(3.231f, 5.645f) << endl;
+
+    cout << SumType(10, 20) << endl;
+    cout << SumType(10.567, 20.321) << endl;
+
+
 
     // Mobile().PrintPrice();
 }

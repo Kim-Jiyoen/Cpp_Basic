@@ -47,3 +47,11 @@ void ArrayClass();
 void StringClass();
 void VectorClass();
 
+int SumNumber(int a, int b);
+float SumNumber(float a, float b);
+
+template <typename T>
+T SumType(T a, T b)
+{
+	return (a + b);
+}
